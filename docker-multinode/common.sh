@@ -184,6 +184,9 @@ kube::multinode::start_k8s_master() {
 
   kube::multinode::make_shared_kubelet_dir
 
+# Stop 3 seconds
+  sleep 3
+
   docker run -d \
     --net=host \
     --pid=host \
